@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Neon Liquid AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dynamic Glowing Orbs Background -->
+    <div class="liquid-bg">
+        <div class="glow-orb orb-blue"></div>
+        <div class="glow-orb orb-purple"></div>
+        <div class="glow-orb orb-cyan"></div>
+    </div>
+
+    <!-- Main Container Glassmorphism -->
+    <div class="main-wrapper">
+        <div class="chat-card glass-neon">
+            <header class="chat-header">
+                <div class="brand">
+                    <span class="sparkle-icon"></span>
+                    <h1 class="brand-title">GEMINI AI</h1>
+                </div>
+                <div class="status-indicator">
+                    <span class="dot"></span>
+                    <span class="status-text">ONLINE</span>
+                </div>
+            </header>
+
+            <main class="chat-body" id="chat-box">
+                <div class="message ai-message">
+                    <div class="msg-content">Halo. Ada yang bisa saya bantu hari ini?</div>
+                </div>
+            </main>
+
+            <footer class="chat-footer">
+                <div class="input-container glass-input">
+                    <textarea id="user-input" placeholder="Ketik pesan..." rows="1"></textarea>
+                    <button id="send-btn" aria-label="Kirim">
+                        <span class="send-arrow"></span>
+                    </button>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
