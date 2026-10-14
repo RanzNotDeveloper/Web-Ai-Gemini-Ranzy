@@ -13,8 +13,8 @@ export default async function handler(req, res) {
     }
 
     // Mengambil API Key dari Environment Variable Vercel atau Fallback Key
-    const apiKey = process.env.GEMINI_API_KEY || "AQ.Ab8RN6JNiZnGz2CCLxrD-Dwh1ZvmVGH4ATKvjqYgMjOt03oBhA";
-    
+    const apiKey = process.env.GEMINI_API_KEY;
+
     const ai = new GoogleGenAI({ apiKey });
     
     const response = await ai.models.generateContent({
