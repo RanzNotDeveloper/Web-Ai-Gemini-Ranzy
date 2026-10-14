@@ -8,14 +8,10 @@ export default async function handler(req, res) {
   try {
     const { prompt } = req.body;
     
-    if (!prompt) {
-      return res.status(400).json({ error: "Prompt tidak boleh kosong." });
-    }
-
-    // Mengambil API Key dari Environment Variable Vercel atau Fallback Key
-    const apiKey = process.env.GEMINI_API_KEY;
-
-    const ai = new GoogleGenAI({ apiKey });
+    // API Key diisikan langsung di sini
+    const ai = new GoogleGenAI({
+      apiKey: "AQ.Ab8RN6JNiZnGz2CCLxrD-Dwh1ZvmVGH4ATKvjqYgMjOt03oBhA"
+    });
     
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
@@ -25,6 +21,6 @@ export default async function handler(req, res) {
     res.status(200).json({ text: response.text });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Terjadi kesalahan saat mengolah respon AI." });
+    res.status(500).json({ error: "Terjadi kesalahan saat menghubungi AI." });
   }
 }
